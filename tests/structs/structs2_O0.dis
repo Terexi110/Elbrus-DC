@@ -1,0 +1,631 @@
+
+/sessions/rcw-01v6zbv2d3kotnij2xwpeu58/mnt/Elbrus-DC/tests/structs/structs2_O0.o:     file format elf64-e2k
+
+
+Disassembly of section .text:
+
+0000000000000000 <first_chars>:
+   0:	
+  setwd wsz = 0x4, nfx = 0x1, dbl = 0x0
+
+  10:	
+  adds,0,sm 0x0, 0x0, %r4
+  adds,1,sm 0x0, 0x0, %r5
+
+  20:	
+  nop 4
+  ipd 2
+  cmplsb,0 %r5, %r1, %pred0
+  disp %ctpr1, 0x90
+
+  30:	
+  ct %ctpr1 ? ~%pred0
+  ipd 3
+
+  38:	
+  ipd 2
+  sxt,0,sm 0x2, %r5, %dr6
+  adds,1 %r5, 0x1, %r5
+  disp %ctpr1, 0x20
+
+  50:	
+  shld,0 %dr6, 0x3, %dr6
+
+  58:	
+  nop 1
+  addd,0 %dr0, %dr6, %dr6
+
+  60:	
+  nop 2
+  ldd,0 %dr6, 0x0, %dr6
+
+  68:	
+  nop 2
+  ldb,0 %dr6, 0x0, %dr6
+
+  70:	
+  getfs,0 %r6, _f16s 0x1200, %r6
+
+  80:	
+  ct %ctpr1
+  ipd 3
+  adds,0 %r4, %r6, %r4
+
+  90:	
+  nop 5
+  ipd 2
+  sxt,0,sm 0x2, %r4, %dr0
+  return %ctpr3
+
+  a0:	
+  ct %ctpr3
+  ipd 3
+
+
+00000000000000a8 <push>:
+  a8:	
+  setwd wsz = 0x4, nfx = 0x1, dbl = 0x0
+
+  b8:	
+  ipd 2
+  return %ctpr3
+
+  c8:	
+  nop 2
+  ldd,0 %dr0, 0x0, %dr4
+
+  d0:	
+  nop 1
+  std,2,sm %dr1, 0x8, %dr4
+  std,5,sm %dr0, 0x0, %dr1
+
+  e0:	
+  ct %ctpr3
+  ipd 3
+
+
+00000000000000e8 <mat_sum>:
+  e8:	
+  setwd wsz = 0x5, nfx = 0x1, dbl = 0x0
+
+  f8:	
+  addd,0,sm 0x0, 0x0, %dr5
+  adds,1,sm 0x0, 0x0, %r6
+
+ 108:	
+  nop 4
+  ipd 2
+  cmplsb,0 %r6, %r1, %pred0
+  disp %ctpr1, 0x1b8
+
+ 118:	
+  ct %ctpr1 ? ~%pred0
+  ipd 3
+
+ 120:	
+  adds,0,sm 0x0, 0x0, %r7
+
+ 128:	
+  nop 4
+  ipd 2
+  cmplsb,0 %r7, %r2, %pred1
+  disp %ctpr1, 0x1a0
+
+ 138:	
+  ct %ctpr1 ? ~%pred1
+  ipd 3
+
+ 140:	
+  ipd 2
+  sxt,0,sm 0x2, %r6, %dr8
+  sxt,1,sm 0x2, %r7, %dr9
+  adds,2 %r7, 0x1, %r7
+  disp %ctpr1, 0x128
+
+ 158:	
+  shld,0 %dr8, 0x3, %dr8
+  shld,1 %dr9, 0x2, %dr9
+
+ 168:	
+  nop 1
+  addd,0 %dr0, %dr8, %dr8
+
+ 170:	
+  nop 2
+  ldd,0 %dr8, 0x0, %dr8
+
+ 178:	
+  addd,0 %dr8, %dr9, %dr8
+
+ 180:	
+  nop 2
+  ldw,0 %dr8, 0x0, %dr8
+
+ 188:	
+  sxt,0,sm 0x2, %r8, %dr8
+
+ 190:	
+  ct %ctpr1
+  ipd 3
+  addd,0 %dr5, %dr8, %dr5
+
+ 1a0:	
+  nop 4
+  ipd 2
+  adds,0 %r6, 0x1, %r6
+  disp %ctpr1, 0x108
+
+ 1b0:	
+  ct %ctpr1
+  ipd 3
+
+ 1b8:	
+  nop 5
+  ipd 2
+  addd,0,sm 0x0, %dr5, %dr0
+  return %ctpr3
+
+ 1c8:	
+  ct %ctpr3
+  ipd 3
+
+ 1d0:	
+  nop
+
+
+0000000000000200 <inner_sum>:
+ 200:	
+  setwd wsz = 0x4, nfx = 0x1, dbl = 0x0
+
+ 210:	
+  ipd 2
+  ldh,0 %dr0, 0x2, %dr3
+  return %ctpr3
+
+ 220:	
+  nop 1
+  ldh,0 %dr0, 0x0, %dr4
+
+ 228:	
+  getfs,0 %r3, _f16s 0x3400, %r3
+
+ 238:	
+  getfs,0 %r4, _f16s 0x3400, %r4
+
+ 248:	
+  nop 5
+  muls,0 %r4, 0x3, %r4
+
+ 258:	
+  adds,0 %r4, %r3, %r3
+
+ 260:	
+  ct %ctpr3
+  ipd 3
+  sxt,0,sm 0x2, %r3, %dr0
+
+
+0000000000000270 <outer_total>:
+ 270:	
+  getsp,0 _f16s 0xfff0, %dr2
+  setwd wsz = 0x8, nfx = 0x1, dbl = 0x0
+  setbn rbs = 0x4, rsz = 0x3, rcur = 0x0
+
+ 288:	
+  addd,0 %dr0, 0x4, %dr3
+
+ 290:	
+  ldw,0 %dr0, 0x0, %dr4
+  addd,1,sm 0x0, %dr3, %db[0]
+
+ 2a0:	
+  nop 4
+  disp %ctpr1, 0x2a0
+
+			2a4: R_E2K_DISP	inner_sum+0x4
+ 2a8:	
+  ipd 3
+  call %ctpr1, wbs = 0x4
+
+ 2b8:	
+  ipd 2
+  adds,0,sm 0x0, %b[0], %r3
+  ldd,2 %dr0, 0x8, %dr5
+  return %ctpr3
+
+ 2d0:	
+  nop 1
+  adds,0 %r4, %r3, %r3
+
+ 2d8:	
+  adds,0,sm 0x0, %r5, %r4
+
+ 2e0:	
+  adds,0 %r3, %r4, %r3
+
+ 2e8:	
+  sxt,0,sm 0x2, %r3, %dr0
+
+ 2f0:	
+  ct %ctpr3
+  ipd 3
+
+
+00000000000002f8 <inner2_sum>:
+ 2f8:	
+  setwd wsz = 0x4, nfx = 0x1, dbl = 0x0
+
+ 308:	
+  ipd 2
+  ldw,0 %dr0, 0x4, %dr3
+  return %ctpr3
+
+ 318:	
+  nop 2
+  ldh,0 %dr0, 0x0, %dr4
+
+ 320:	
+  getfs,0 %r4, _f16s 0x3400, %r4
+
+ 330:	
+  nop 5
+  muls,0 %r4, 0x3, %r4
+
+ 340:	
+  adds,0 %r4, %r3, %r3
+
+ 348:	
+  ct %ctpr3
+  ipd 3
+  sxt,0,sm 0x2, %r3, %dr0
+
+
+0000000000000358 <outer2_total>:
+ 358:	
+  getsp,0 _f16s 0xfff0, %dr2
+  setwd wsz = 0x8, nfx = 0x1, dbl = 0x0
+  setbn rbs = 0x4, rsz = 0x3, rcur = 0x0
+
+ 370:	
+  addd,0 %dr0, 0x4, %dr3
+
+ 378:	
+  ldw,0 %dr0, 0x0, %dr4
+  addd,1,sm 0x0, %dr3, %db[0]
+
+ 388:	
+  nop 4
+  disp %ctpr1, 0x388
+
+			38c: R_E2K_DISP	inner2_sum+0x4
+ 390:	
+  ipd 3
+  call %ctpr1, wbs = 0x4
+
+ 3a0:	
+  ipd 2
+  adds,0,sm 0x0, %b[0], %r3
+  ldd,2 0x10, %dr0, %dr5
+  return %ctpr3
+
+ 3b8:	
+  nop 1
+  adds,0 %r4, %r3, %r3
+
+ 3c0:	
+  adds,0,sm 0x0, %r5, %r4
+
+ 3c8:	
+  adds,0 %r3, %r4, %r3
+
+ 3d0:	
+  sxt,0,sm 0x2, %r3, %dr0
+
+ 3d8:	
+  ct %ctpr3
+  ipd 3
+
+
+00000000000003e0 <buf_clear>:
+ 3e0:	
+  setwd wsz = 0x4, nfx = 0x1, dbl = 0x0
+
+ 3f0:	
+  adds,0,sm 0x0, 0x0, %r4
+  adds,1,sm 0x0, 0x0, %r3
+
+ 400:	
+  stw,2,sm %dr0, 0x0, %r4
+
+ 408:	
+  nop 4
+  ipd 2
+  cmplsb,0 %r3, _f16s 0x14, %pred0
+  disp %ctpr1, 0x460
+
+ 420:	
+  ct %ctpr1 ? ~%pred0
+  ipd 3
+
+ 428:	
+  ipd 2
+  addd,0 %dr0, 0x4, %dr4
+  sxt,1,sm 0x2, %r3, %dr5
+  disp %ctpr1, 0x408
+
+ 440:	
+  addd,0 %dr4, %dr5, %dr4
+
+ 448:	
+  nop 2
+  adds,0 %r3, 0x1, %r3
+  stb,2,sm %dr4, 0x0, %r3
+
+ 458:	
+  ct %ctpr1
+  ipd 3
+
+ 460:	
+  nop 5
+  ipd 2
+  return %ctpr3
+
+ 470:	
+  ct %ctpr3
+  ipd 3
+
+
+0000000000000478 <buf_last>:
+ 478:	
+  setwd wsz = 0x4, nfx = 0x1, dbl = 0x0
+
+ 488:	
+  ipd 2
+  addd,0 %dr0, 0x4, %dr3
+  ldw,2 %dr0, 0x0, %dr4
+  return %ctpr3
+
+ 4a0:	
+  nop 1
+  addd,0 0x13, %dr3, %dr3
+
+ 4a8:	
+  nop 2
+  ldb,0 %dr3, 0x0, %dr3
+
+ 4b0:	
+  getfs,0 %r3, _f16s 0x1200, %r3
+
+ 4c0:	
+  adds,0 %r3, %r4, %r3
+
+ 4c8:	
+  ct %ctpr3
+  ipd 3
+  sxt,0,sm 0x2, %r3, %dr0
+
+
+00000000000004d8 <pt_init>:
+ 4d8:	
+  setwd wsz = 0x4, nfx = 0x1, dbl = 0x0
+
+ 4e8:	
+  ipd 2
+  sxt,0,sm 0x2, %r1, %dr5
+  sxt,1,sm 0x2, %r2, %dr6
+  stw,2,sm %dr0, 0x0, %r1
+  stw,5,sm %dr0, 0x4, %r2
+  return %ctpr3
+
+ 508:	
+  nop 5
+  muld,0 %dr5, %dr6, %dr5
+
+ 518:	
+  ct %ctpr3
+  ipd 3
+  std,2,sm %dr0, 0x8, %dr5
+
+
+0000000000000528 <pt_local>:
+ 528:	
+  getsp,0 _f16s 0xffd0, %dr3
+  setwd wsz = 0x8, nfx = 0x1, dbl = 0x0
+  setbn rbs = 0x4, rsz = 0x3, rcur = 0x0
+
+ 540:	
+  addd,0 %dr3, _f16s 0x30, %dr2
+
+ 550:	
+  addd,0 %dr2, _f16s 0xfff0, %dr4
+  sxt,1,sm 0x2, %r0, %db[1]
+  sxt,2,sm 0x2, %r1, %db[2]
+
+ 568:	
+  addd,0,sm 0x0, %dr4, %db[0]
+
+ 570:	
+  nop 4
+  disp %ctpr1, 0x570
+
+			574: R_E2K_DISP	pt_init+0x4
+ 578:	
+  ipd 3
+  call %ctpr1, wbs = 0x4
+
+ 588:	
+  ipd 2
+  ldw,0 %dr2, _f16s 0xfff0, %dr4
+  ldw,2 %dr2, _f16s 0xfff4, %dr5
+  return %ctpr3
+
+ 5a0:	
+  nop 1
+  ldd,0 %dr2, _f16s 0xfff8, %dr6
+
+ 5b0:	
+  sxt,0,sm 0x2, %r4, %dr4
+  sxt,1,sm 0x2, %r5, %dr5
+
+ 5c0:	
+  addd,0 %dr6, %dr4, %dr4
+
+ 5c8:	
+  subd,0 %dr4, %dr5, %dr4
+
+ 5d0:	
+  ct %ctpr3
+  ipd 3
+  addd,0,sm 0x0, %dr4, %dr0
+
+ 5e0:	
+  nop
+
+
+0000000000000600 <gpt_get>:
+ 600:	
+  setwd wsz = 0x4, nfx = 0x1, dbl = 0x0
+
+ 610:	
+  ldw,0 0x0, _f64 0x4, %dr3
+
+			618: R_E2K_64_ABS_LIT	gpt+0x4
+ 620:	
+  ipd 2
+  ldd,0 0x0, _f64 0x8, %dr4
+  return %ctpr3
+
+			630: R_E2K_64_ABS_LIT	gpt+0x8
+ 638:	
+  nop 2
+  ldw,0 0x0, _f64 0x0, %dr5
+
+			640: R_E2K_64_ABS_LIT	gpt
+ 648:	
+  nop 5
+  muls,0 %r5, %r3, %r3
+
+ 658:	
+  sxt,0,sm 0x2, %r3, %dr3
+
+ 660:	
+  addd,0 %dr3, %dr4, %dr3
+
+ 668:	
+  ct %ctpr3
+  ipd 3
+  addd,0,sm 0x0, %dr3, %dr0
+
+
+0000000000000678 <gpt_set>:
+ 678:	
+  setwd wsz = 0x4, nfx = 0x1, dbl = 0x0
+
+ 688:	
+  stw,2,sm 0x0, _f64 0x0, %r0
+
+			690: R_E2K_64_ABS_LIT	gpt
+ 698:	
+  ipd 2
+  sxt,0,sm 0x2, %r0, %dr4
+  sxt,1,sm 0x2, %r1, %dr5
+  stw,2,sm 0x0, _f64 0x4, %r1
+  return %ctpr3
+
+			6b0: R_E2K_64_ABS_LIT	gpt+0x4
+ 6b8:	
+  subd,0 %dr4, %dr5, %dr4
+
+ 6c0:	
+  nop 3
+  std,2,sm 0x0, _f64 0x8, %dr4
+
+			6c8: R_E2K_64_ABS_LIT	gpt+0x8
+ 6d0:	
+  ct %ctpr3
+  ipd 3
+
+
+00000000000006d8 <gtab_find>:
+ 6d8:	
+  setwd wsz = 0x4, nfx = 0x1, dbl = 0x0
+
+ 6e8:	
+  adds,0,sm 0x0, 0x0, %r3
+
+ 6f0:	
+  nop 4
+  ipd 2
+  cmplsb,0 %r3, _f16s 0x10, %pred0
+  disp %ctpr1, 0x7a8
+
+ 708:	
+  ct %ctpr1 ? ~%pred0
+  ipd 3
+
+ 710:	
+  ipd 2
+  sxt,0,sm 0x2, %r3, %dr4
+  disp %ctpr1, 0x790
+
+ 720:	
+  shld,0 %dr4, 0x3, %dr4
+
+ 728:	
+  nop 1
+  addd,0 %dr4, _f64 0x10, %dr4
+
+			730: R_E2K_64_ABS_LIT	gtab
+ 738:	
+  nop 2
+  ldw,0 %dr4, 0x0, %dr4
+
+ 740:	
+  nop 2
+  cmpesb,0 %r4, %r0, %pred1
+
+ 748:	
+  ct %ctpr1 ? ~%pred1
+  ipd 3
+
+ 750:	
+  ipd 2
+  sxt,0,sm 0x2, %r3, %dr4
+  return %ctpr3
+
+ 760:	
+  shld,0 %dr4, 0x3, %dr4
+
+ 768:	
+  addd,0 %dr4, _f64 0x10, %dr4
+
+			770: R_E2K_64_ABS_LIT	gtab
+ 778:	
+  nop 2
+  ldw,0 %dr4, 0x4, %dr4
+
+ 780:	
+  ct %ctpr3
+  ipd 3
+  sxt,0,sm 0x2, %r4, %dr0
+
+ 790:	
+  nop 4
+  ipd 2
+  adds,0 %r3, 0x1, %r3
+  disp %ctpr1, 0x6f0
+
+ 7a0:	
+  ct %ctpr1
+  ipd 3
+
+ 7a8:	
+  nop 5
+  ipd 2
+  addd,0,sm 0x0, _f16s 0xffff, %dr0
+  return %ctpr3
+
+ 7c0:	
+  ct %ctpr3
+  ipd 3
+

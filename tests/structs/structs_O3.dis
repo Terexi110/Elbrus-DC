@@ -1,0 +1,801 @@
+
+/sessions/rcw-01v6zbv2d3kotnij2xwpeu58/mnt/Elbrus-DC/tests/structs/structs_O3.o:     file format elf64-e2k
+
+
+Disassembly of section .text:
+
+0000000000000000 <pt_get>:
+   0:	
+  nop 2
+  ipd 2
+  ldd,0 %dr0, 0x8, %dg18
+  ldw,3 %dr0, 0x0, %dg16
+  ldw,5 %dr0, 0x4, %dg17
+  return %ctpr3
+  setwd wsz = 0x4, nfx = 0x1, dbl = 0x0
+
+  20:	
+  nop 5
+  muls,3 %g16, %g17, %g16
+
+  30:	
+  nop 1
+  sxt,0 0x2, %g16, %dg16
+
+  38:	
+  ct %ctpr3
+  ipd 3
+  addd,3 %dg16, %dg18, %dr0
+
+
+0000000000000048 <pt_set>:
+  48:	
+  nop 1
+  ipd 2
+  stw,2 %dr0, 0x4, %r2
+  stw,5 %dr0, 0x0, %r1
+  return %ctpr3
+  setwd wsz = 0x4, nfx = 0x1, dbl = 0x0
+
+  68:	
+  nop 3
+  smulx,0 %r1, %r2, %dg16
+
+  78:	
+  ct %ctpr3
+  ipd 3
+  std,2 %dr0, 0x8, %dg16
+
+
+0000000000000088 <mix_sum>:
+  88:	
+  ipd 2
+  ldh,0 %dr0, 0x2, %dg18
+  ldd,2 0x10, %dr0, %dg19
+  ldb,3 %dr0, 0x0, %dg16
+  ldw,5 %dr0, 0x4, %dg17
+  return %ctpr3
+  setwd wsz = 0x4, nfx = 0x1, dbl = 0x0
+
+  b0:	
+  nop 1
+  ldd,0 %dr0, 0x8, %dg20
+
+  b8:	
+  getfs,2 %g18, _f16s 0x3400, %g18
+  getfs,5 %g16, _f16s 0x1200, %g16
+
+  c8:	
+  adds,5 %g17, %g16, %g16
+
+  d0:	
+  adds,5 %g18, %g16, %g16
+
+  d8:	
+  nop 1
+  istofd,3 %g16, %dg16
+
+  e0:	
+  nop 1
+  idtofd,0 %dg19, %dg17
+
+  e8:	
+  nop 3
+  faddd,3 %dg16, %dg20, %dg16
+
+  f0:	
+  nop 4
+  faddd,3 %dg16, %dg17, %dr0
+
+  f8:	
+  ct %ctpr3
+  ipd 3
+
+
+0000000000000100 <list_sum>:
+ 100:	
+  ipd 2
+  adds,0 0x0, 0x0, %r2
+  addd,3,sm 0x0, %dr0, %dg16
+  return %ctpr3
+  setwd wsz = 0x7, nfx = 0x1, dbl = 0x0
+  setbn rbs = 0x4, rsz = 0x2, rcur = 0x0
+  setbp psz = 0x0
+
+ 120:	
+  nop 1
+  cmpedb,1 %dr0, 0x0, %pred0
+  ldd,3,sm %dg16, 0x8, %dg17
+
+ 130:	
+  addd,3 0x0, 0x0, %dr0 ? %pred0
+
+ 140:	
+  ct %ctpr3 ? %pred0
+  ipd 3
+
+ 148:	
+  ipd 2
+  rwd,0 _f64 0xff0000000000, %lsr
+  ldw,2,sm %dg16, 0x0, %dg16
+  return %ctpr3
+  setwd wsz = 0x7, nfx = 0x1, dbl = 0x0
+  setbn rbs = 0x4, rsz = 0x2, rcur = 0x0
+  setbp psz = 0x1
+
+ 170:	
+  nop 1
+  ipd 2
+  cmpedb,1,sm %dg17, 0x0, %pred1
+  ldd,2,sm %dg17, 0x8, %db[2]
+  addd,4,sm 0x0, %dg17, %db[4]
+  disp %ctpr1, 0x190
+
+ 188:	
+  nop 1
+  addd,0,sm 0x0, %dg16, %db[3]
+
+ 190:	
+  loop_mode
+  nop 1
+
+ 198:	
+  loop_mode
+  ct %ctpr1 ? ~%pred1
+  ipd 3
+  abn abnf=1, abnt=1
+  abp abpf=1, abpt=1
+  alc alcf=1, alct=1
+  cmpedb,1,sm %db[2], 0x0, %pred0
+  ldd,2,sm %db[2], 0x8, %db[0]
+  ldw,3,sm %db[4], 0x0, %db[1]
+  adds,5,sm %r2, %b[3], %r2
+
+ 1b0:	
+  nop 1
+  setwd wsz = 0x7, nfx = 0x1, dbl = 0x0
+  setbn rbs = 0x4, rsz = 0x2, rcur = 0x0
+  setbp psz = 0x0
+
+ 1c0:	
+  ct %ctpr3
+  ipd 3
+  sxt,3 0x2, %r2, %dr0
+
+ 1d0:	
+  nop
+
+
+0000000000000200 <list_len>:
+ 200:	
+  ipd 2
+  adds,0 0x0, 0x0, %r2
+  addd,3,sm 0x0, %dr0, %dg16
+  return %ctpr3
+  setwd wsz = 0x7, nfx = 0x1, dbl = 0x0
+  setbn rbs = 0x4, rsz = 0x2, rcur = 0x0
+  setbp psz = 0x0
+
+ 220:	
+  nop 1
+  cmpedb,1 %dr0, 0x0, %pred0
+  ldd,3,sm %dg16, 0x8, %dg16
+
+ 230:	
+  addd,3 0x0, 0x0, %dr0 ? %pred0
+
+ 240:	
+  ct %ctpr3 ? %pred0
+  ipd 3
+
+ 248:	
+  ipd 2
+  rwd,0 _f64 0xff0000000000, %lsr
+  return %ctpr3
+  setwd wsz = 0x7, nfx = 0x1, dbl = 0x0
+  setbn rbs = 0x4, rsz = 0x2, rcur = 0x0
+  setbp psz = 0x1
+
+ 270:	
+  nop 3
+  ipd 2
+  cmpedb,1,sm %dg16, 0x0, %pred1
+  ldd,2,sm %dg16, 0x8, %db[2]
+  disp %ctpr1, 0x288
+
+ 288:	
+  loop_mode
+  nop 1
+
+ 290:	
+  loop_mode
+  ct %ctpr1 ? ~%pred1
+  ipd 3
+  abn abnf=1, abnt=1
+  abp abpf=1, abpt=1
+  alc alcf=1, alct=1
+  ldd,3,sm %db[2], 0x8, %db[0]
+  cmpedb,4,sm %db[2], 0x0, %pred0
+  adds,5,sm %r2, 0x1, %r2
+
+ 2a8:	
+  nop 1
+  setwd wsz = 0x7, nfx = 0x1, dbl = 0x0
+  setbn rbs = 0x4, rsz = 0x2, rcur = 0x0
+  setbp psz = 0x0
+
+ 2b8:	
+  ct %ctpr3
+  ipd 3
+  sxt,3 0x2, %r2, %dr0
+
+
+00000000000002c8 <buf_sum>:
+ 2c8:	
+  ipd 2
+  adds,0 0x0, 0x0, %r2
+  addd,1 0x0, _f32s 0xff20, %dg17
+  ldw,3 %dr0, 0x0, %dg16
+  addd,4,sm %dr0, 0x4, %dr3
+  return %ctpr3
+  setwd wsz = 0x4, nfx = 0x1, dbl = 0x0
+
+ 2f0:	
+  nop 1
+  ldb,3,sm %dr3, 0x0, %dg18
+
+ 2f8:	
+  nop 1
+  cmplsb,3 0x0, %g16, %pred0
+
+ 300:	
+  addd,3 0x0, 0x0, %dr0 ? ~%pred0
+
+ 310:	
+  ct %ctpr3 ? ~%pred0
+  ipd 3
+
+ 318:	
+  ipd 2
+  ldb,0,sm %dr3, 0x3, %dg19
+  scls,1 0x9, 0x9, %r0
+  ldb,2,sm %dr3, 0x2, %dg20
+  ldb,3,sm %dr3, 0x1, %dg21
+  return %ctpr3
+  setwd wsz = 0xa, nfx = 0x1, dbl = 0x0
+  setbn rbs = 0x4, rsz = 0x5, rcur = 0x0
+
+ 340:	
+  ipd 2
+  adds,0 0x1, 0x0, %g16 ? ~%pred0
+  addd,1,sm 0x4, 0x0, %db[4]
+  getfs,2,sm %g18, %r0, %b[10]
+  addd,3,sm 0x5, 0x0, %db[2]
+  disp %ctpr1, 0x398
+
+ 360:	
+  sxt,0 0x6, %g16, %dg16
+
+ 368:	
+  insfd,0 %dg17, _f32s 0xa820, %dg16, %dg16
+  addd,1,sm 0x0, %dg20, %db[5]
+  addd,2,sm 0x0, %dg19, %db[3]
+  addd,3,sm 0x0, %dg21, %db[7]
+
+ 388:	
+  nop 4
+  rwd,0 %dg16, %lsr
+
+ 398:	
+  loop_mode
+  ct %ctpr1 ? %NOT_LOOP_END
+  ipd 3
+  abn abnf=1, abnt=1
+  alc alcf=1, alct=1
+  addd,2,sm %db[2], 0x1, %db[0]
+  ldb,3,sm %dr3, %db[4], %db[1]
+  getfs,4,sm %b[7], %r0, %b[8]
+  adds,5,sm %r2, %b[10], %r2
+
+ 3b0:	
+  nop 1
+  setwd wsz = 0x4, nfx = 0x1, dbl = 0x0
+
+ 3c0:	
+  ct %ctpr3
+  ipd 3
+  sxt,3 0x2, %r2, %dr0
+
+
+00000000000003d0 <rec_find>:
+ 3d0:	
+  nop 2
+  ipd 2
+  addd,0 0x0, _f32s 0xff20, %dg16
+  addd,3,sm 0x0, %dr0, %dr4
+  return %ctpr3
+  setwd wsz = 0x4, nfx = 0x1, dbl = 0x0
+  setbp psz = 0x0
+
+ 3f0:	
+  nop 1
+  cmplsb,0 0x0, %r1, %pred5
+
+ 3f8:	
+  subd,3 0x0, 0x1, %dr0 ? ~%pred5
+
+ 408:	
+  ct %ctpr3 ? ~%pred5
+  ipd 3
+
+ 410:	
+  ipd 2
+  return %ctpr3
+  setwd wsz = 0xe, nfx = 0x1, dbl = 0x0
+  setbn rbs = 0x4, rsz = 0x9, rcur = 0x0
+  setbp psz = 0x4
+
+ 428:	
+  ipd 2
+  adds,0,sm 0x1, 0x0, %r1 ? ~%pred5
+  subd,1,sm 0x0, 0x8, %db[5]
+  adds,2,sm 0x0, 0x0, %b[16]
+  disp %ctpr1, 0x4e8
+
+ 448:	
+  sxt,0 0x6, %r1, %dg17
+  addd,1,sm %db[5], _f16s 0x28, %dg18
+  addd,2,sm 0x8, %db[5], %dg19
+
+ 460:	
+  addd,0,sm %db[5], _f16s 0x18, %dg20
+  insfd,1 %dg16, _f32s 0xa820, %dg17, %dg16
+  ldw,2,sm %dr4, %dg19, %dg19
+  addd,3,sm %db[5], _f16s 0x20, %dg21
+  addd,4,sm %db[5], _f16s 0x10, %dg17
+
+ 488:	
+  rwd,0 %dg16, %lsr
+  addd,1,sm 0x8, %dg18, %dg16
+  ldw,2,sm %dr4, %dg20, %dg20
+  ldw,3,sm %dr4, %dg17, %dg17
+  addd,4,sm %dg18, _f16s 0x10, %db[11]
+  ldw,5,sm %dr4, %dg21, %dg21
+
+ 4b0:	
+  ldw,2,sm %dr4, %dg18, %dg18
+
+ 4b8:	
+  cmpesb,0,sm %g19, %r2, %pred3
+  ldw,2,sm %dr4, %dg16, %dg16
+
+ 4c8:	
+  cmpesb,0,sm %g20, %r2, %pred1
+  cmpesb,3,sm %g17, %r2, %pred2
+  addd,4,sm 0x0, %dg21, %db[7]
+
+ 4d8:	
+  addd,0,sm 0x0, %dg18, %db[5]
+
+ 4e0:	
+  addd,0,sm 0x0, %dg16, %db[3]
+
+ 4e8:	
+  loop_mode
+  ct %ctpr1 ? ~%pred3 && %NOT_LOOP_END
+  ipd 3
+  abn abnf=1, abnt=1
+  abp abpf=1, abpt=1
+  alc alcf=1, alct=1
+  cmpesb,0,sm %b[7], %r2, %pred0
+  addd,1,sm 0x8, %db[11], %db[9]
+  ldw,2,sm %dr4, %db[11], %db[1]
+  adds,5,sm 0x1, %b[16], %b[14]
+
+ 500:	
+  nop 2
+  adds,0,sm 0x0, %b[18], %r1
+  setwd wsz = 0x4, nfx = 0x1, dbl = 0x0
+  setbp psz = 0x0
+  pass %pred4, @p0
+  andp @p0, @p0, @p4
+  pass @p4, %pred5
+
+ 518:	
+  ct %ctpr3 ? ~%pred5
+  ipd 3
+  subd,3 0x0, 0x1, %dr0 ? ~%pred5
+
+ 528:	
+  ipd 2
+  sxt,0 0x2, %r1, %dg16
+  return %ctpr3
+
+ 538:	
+  shld,0 %dg16, 0x3, %dg16
+
+ 540:	
+  addd,0 %dr4, %dg16, %dg16
+
+ 548:	
+  nop 3
+  ldw,0 %dg16, 0x4, %dg16
+
+ 550:	
+  ct %ctpr3
+  ipd 3
+  sxt,3 0x2, %g16, %dr0
+
+
+0000000000000560 <rec_total>:
+ 560:	
+  ipd 2
+  addd,0 0x0, 0x0, %dr3
+  addd,1 0x0, _f32s 0xff20, %dg16
+  addd,3,sm 0x0, %dr0, %dr4
+  return %ctpr3
+  setwd wsz = 0x4, nfx = 0x1, dbl = 0x0
+
+ 588:	
+  nop 1
+  cmplsb,0 0x0, %r1, %pred0
+
+ 590:	
+  addd,3 0x0, 0x0, %dr0 ? ~%pred0
+
+ 5a0:	
+  ct %ctpr3 ? ~%pred0
+  ipd 3
+
+ 5a8:	
+  ipd 2
+  addd,0 %dr4, 0x4, %dr0
+  return %ctpr3
+  setwd wsz = 0xf, nfx = 0x1, dbl = 0x0
+  setbn rbs = 0x4, rsz = 0xa, rcur = 0x0
+
+ 5c0:	
+  ipd 2
+  adds,0,sm 0x1, 0x0, %r1 ? ~%pred0
+  subd,1,sm 0x0, 0x8, %db[13]
+  disp %ctpr1, 0x718
+
+ 5d8:	
+  sxt,0 0x6, %r1, %dg17
+  addd,1,sm %db[13], _f16s 0x50, %dg18
+  addd,2,sm %db[13], _f16s 0x48, %dg19
+
+ 5f0:	
+  insfd,0 %dg16, _f32s 0xa820, %dg17, %dg16
+  addd,1,sm %db[13], _f16s 0x40, %dg17
+  addd,2,sm %db[13], _f16s 0x38, %dg20
+  addd,3,sm %db[13], _f16s 0x30, %dg21
+  addd,4,sm %db[13], _f16s 0x28, %dg22
+  addd,5,sm %db[13], _f32s 0x20, %dg23
+
+ 620:	
+  rwd,0 %dg16, %lsr
+  addd,1,sm %db[13], _f16s 0x18, %dg24
+  addd,2,sm 0x8, %db[13], %dg26
+  ldw,3,sm %dr4, %dg21, %dg16
+  addd,4,sm %db[13], _f16s 0x10, %dg25
+  ldw,5,sm %dr0, %dg21, %dg21
+
+ 648:	
+  addd,1,sm 0x0, %dg18, %db[15]
+  ldw,2,sm %dr4, %dg22, %dg27
+  ldw,3,sm %dr0, %dg22, %dg22
+  addd,4,sm %db[13], _f16s 0x58, %db[13]
+  ldw,5,sm %dr4, %dg23, %dg28
+
+ 668:	
+  ldw,0,sm %dr0, %dg23, %dg23
+  ldw,2,sm %dr4, %dg24, %dg29
+  ldw,3,sm %dr0, %dg24, %dg24
+  ldw,5,sm %dr4, %dg25, %dg30
+
+ 680:	
+  ldw,0,sm %dr0, %dg25, %dg25
+  ldw,2,sm %dr4, %dg26, %dg31
+  ldw,3,sm %dr0, %dg26, %dg26
+  smulx,4,sm %g16, %g21, %db[2]
+  ldw,5,sm %dr0, %dg18, %dg18
+
+ 6a0:	
+  ldw,0,sm %dr4, %dg19, %dg16
+  ldw,2,sm %dr0, %dg19, %dg19
+  ldw,3,sm %dr4, %dg17, %dg21
+  ldw,5,sm %dr0, %dg17, %dg17
+
+ 6b8:	
+  smulx,0,sm %g27, %g22, %db[4]
+  smulx,1,sm %g28, %g23, %db[6]
+  ldw,2,sm %dr4, %dg20, %dr1
+  ldw,5,sm %dr0, %dg20, %dg20
+
+ 6d0:	
+  smulx,0,sm %g29, %g24, %db[8]
+  smulx,1,sm %g30, %g25, %db[10]
+  addd,3,sm 0x0, %dg18, %db[3]
+
+ 6e8:	
+  smulx,0,sm %g31, %g26, %db[12]
+  addd,2,sm 0x0, %dg16, %db[16]
+  addd,3,sm 0x0, %dg21, %db[18]
+  addd,4,sm 0x0, %dg17, %db[7]
+
+ 700:	
+  addd,2,sm 0x0, %dg19, %db[5]
+  addd,3,sm 0x0, %dg20, %db[9]
+
+ 710:	
+  nop 3
+  addd,1,sm 0x0, %dr1, %db[20]
+
+ 718:	
+  loop_mode
+  ct %ctpr1 ? %NOT_LOOP_END
+  ipd 3
+  abn abnf=1, abnt=1
+  alc alcf=1, alct=1
+  ldw,0,sm %dr4, %db[15], %db[14]
+  smulx,1,sm %b[20], %b[9], %db[0]
+  ldw,3,sm %dr0, %db[13], %db[1]
+  addd,4,sm 0x8, %db[13], %db[11]
+  addd,5,sm %dr3, %db[12], %dr3
+
+ 738:	
+  nop 1
+  setwd wsz = 0x4, nfx = 0x1, dbl = 0x0
+
+ 748:	
+  ct %ctpr3
+  ipd 3
+  addd,3 0x0, %dr3, %dr0
+
+
+0000000000000758 <rec_swap>:
+ 758:	
+  ipd 2
+  return %ctpr3
+  setwd wsz = 0x4, nfx = 0x1, dbl = 0x0
+
+ 770:	
+  cmplsb,0 0x0, %r1, %pred0
+
+ 778:	
+  nop
+
+ 780:	
+  merges,0,sm 0x1, %r1, %r6, %pred0
+  addd,1 0x0, 0x0, %dr7 ? %pred0
+
+ 790:	
+  shrs,0,sm %r6, 0x1, %r5
+
+ 798:	
+  cmpesb,0,sm %r5, 0x0, %pred1
+
+ 7a0:	
+  ct %ctpr3 ? ~%pred0
+  ipd 3
+  pass %pred0, @p0
+  pass %pred1, @p1
+  landp @p0, @p1, @p4
+  pass @p4, %pred1
+
+ 7b0:	
+  nop
+
+ 7b8:	
+  nop
+
+ 7c0:	
+  ipd 3
+  ibranch 0x940 ? %pred1
+
+ 7d0:	
+  ipd 2
+  cmplsb,0 0x0, %r5, %pred0
+  addd,1 0x0, _f32s 0x80ff20, %dg16
+  addd,2 %dr0, 0x4, %dr1
+  addd,3 %dr0, 0xc, %dr4
+  addd,4 %dr0, 0x8, %dr3
+  addd,5 0x4, 0x0, %dg17
+  return %ctpr3
+  setwd wsz = 0xa, nfx = 0x1, dbl = 0x0
+  setbn rbs = 0x4, rsz = 0x5, rcur = 0x0
+
+ 800:	
+  ipd 2
+  xornd,0,sm 0xf, 0x0, %db[6]
+  aaurwd,2 %dr0, %aad0
+  aaurwd,5 %dr7, %aasti1
+  disp %ctpr1, 0x898
+
+ 820:	
+  ipd 2
+  merges,0 0x1, %r5, %g18, %pred0
+  addd,1,sm 0x10, %db[6], %dg19
+  aaurwd,2 %dg17, %aaincr1
+  return %ctpr3
+
+ 840:	
+  sxt,0 0x2, %g18, %dg18
+  sxt,1 0x6, %g18, %dg17
+  ldw,2,sm %dr0, %dg19, %db[7]
+  addd,3,sm %db[6], _f16s 0x20, %db[2]
+
+ 858:	
+  shld,0 %dg18, 0x1, %dr7
+  insfd,1 %dg16, _f32s 0xa820, %dg17, %dg16
+  ldw,2,sm %dr1, %dg19, %db[11]
+  ldw,3,sm %dr3, %dg19, %db[3]
+  ldw,5,sm %dr4, %dg19, %db[8]
+
+ 878:	
+  nop 2
+  rwd,0 %dg16, %lsr
+
+ 888:	
+  nop
+
+ 890:	
+  nop
+
+ 898:	
+  loop_mode
+  ldw,0,sm %dr0, %db[2], %db[5]
+  ldw,2,sm %dr3, %db[2], %db[1]
+  ldw,3,sm %dr1, %db[2], %db[9]
+  ldw,5,sm %dr4, %db[2], %db[6]
+
+ 8b0:	
+  loop_mode
+  staaw,2 %b[11], %aad0 [ %aasti1 ]
+  addd,4,sm 0x10, %db[2], %db[0]
+  staaw,5 %b[8], %aad0 [ %aasti1 + _f32s,_lts0 0x8 ]
+
+ 8c8:	
+  loop_mode
+  ct %ctpr1 ? %NOT_LOOP_END
+  ipd 3
+  abn abnf=1, abnt=1
+  alc alcf=1, alct=1
+  staaw,2 %b[3], %aad0 [ %aasti1 + _f32s,_lts1 0xc ]
+  staaw,5 %b[7], %aad0 [ %aasti1 + _f32s,_lts0 0x4 ]
+  incr,5 %aaincr1
+
+ 8e0:	
+  adds,0 0x0, 0x0, %g16
+  setwd wsz = 0x4, nfx = 0x1, dbl = 0x0
+
+ 8f0:	
+  shld,0,sm %dr7, 0x3, %dr3
+  shls,1 %r5, 0x1, %r1
+  aaurws,2 %g16, %aabf0
+
+ 908:	
+  cmpesb,0 %r1, %r6, %pred0
+  addd,1,sm %dr0, %dr3, %dg16
+  ldw,2,sm %dr0, %dr3, %dg17
+
+ 918:	
+  nop 2
+  ldw,0,sm %dg16, 0x4, %dg18
+
+ 920:	
+  stw,2 %dg16, 0x4, %g17 ? ~%pred0
+
+ 930:	
+  ct %ctpr3
+  ipd 3
+  stw,2 %dr0, %dr3, %g18 ? ~%pred0
+
+ 940:	
+  ipd 3
+  shld,0,sm %dr7, 0x3, %dr3
+  shls,1 %r5, 0x1, %r1
+  ibranch 0x908
+
+ 958:	
+  nop
+
+ 960:	
+  nop
+
+
+0000000000000968 <outer_get>:
+ 968:	
+  nop 2
+  ipd 2
+  ldd,0 %dr0, 0x8, %dg18
+  ldw,2 %dr0, 0x0, %dg19
+  ldh,3 %dr0, 0x6, %dg16
+  ldh,5 %dr0, 0x4, %dg17
+  return %ctpr3
+  setwd wsz = 0x4, nfx = 0x1, dbl = 0x0
+
+ 990:	
+  adds,0 %g19, %g18, %g18
+  getfs,3 %g17, _f16s 0x3400, %g17
+  getfs,4 %g16, _f16s 0x3400, %g16
+
+ 9a8:	
+  nop 5
+  muls,3 %g17, %g16, %g16
+
+ 9b8:	
+  nop 1
+  adds,0 %g18, %g16, %g16
+
+ 9c0:	
+  ct %ctpr3
+  ipd 3
+  sxt,3 0x2, %g16, %dr0
+
+ 9d0:	
+  nop
+
+
+0000000000000a00 <pt_copy>:
+ a00:	
+  ipd 2
+  ldw,0 %dr1, 0x0, %dg16
+  return %ctpr3
+  setwd wsz = 0x4, nfx = 0x1, dbl = 0x0
+
+ a18:	
+  nop 2
+  ldw,0,sm %dr1, 0x4, %dg17, mas = 0x4
+  ldd,3,sm %dr1, 0x8, %dg18, mas = 0x4
+
+ a28:	
+  stw,2 %dr0, 0x0, %g16
+  ldw,5 %dr1, 0x4, %dg17, mas = 0x3
+
+ a38:	
+  stw,2 %dr0, 0x4, %g17
+  ldd,5 %dr1, 0x8, %dg18, mas = 0x3
+
+ a48:	
+  ct %ctpr3
+  ipd 3
+  std,2 %dr0, 0x8, %dg18
+
+
+0000000000000a58 <pt_eq>:
+ a58:	
+  ipd 2
+  ldw,0,sm %dr1, 0x4, %dg17
+  ldd,2,sm %dr1, 0x8, %dg19
+  ldw,3,sm %dr0, 0x4, %dg16
+  ldd,5,sm %dr0, 0x8, %dg18
+  return %ctpr3
+  setwd wsz = 0x4, nfx = 0x1, dbl = 0x0
+
+ a80:	
+  nop 2
+  ldw,0 %dr0, 0x0, %dg20
+  ldw,2 %dr1, 0x0, %dg21
+
+ a90:	
+  cmpesb,0 %g20, %g21, %pred0
+  cmpesb,1,sm %g16, %g17, %pred1
+  cmpedb,3,sm %dg18, %dg19, %pred2
+
+ aa0:	
+  nop 1
+  pass %pred2, @p2
+  landp @p4, @p2, @p5
+  pass @p5, %pred1
+  pass %pred0, @p0
+  pass %pred1, @p1
+  landp @p0, @p1, @p4
+  pass @p4, %pred0
+
+ ab0:	
+  ct %ctpr3
+  ipd 3
+  merged,3,sm 0x0, 0x1, %dr0, %pred1
+

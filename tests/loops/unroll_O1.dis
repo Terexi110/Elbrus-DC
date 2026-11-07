@@ -1,0 +1,721 @@
+
+unroll_O1.o:     file format elf64-e2k
+
+
+Disassembly of section .text:
+
+0000000000000000 <iota>:
+   0:	
+  nop 1
+  ipd 2
+  disp %ctpr1, 0x78
+  setwd wsz = 0x4, nfx = 0x1, dbl = 0x0
+
+  18:	
+  nop 2
+  cmplsb,0 0x0, %r1, %pred0
+
+  20:	
+  ct %ctpr1 ? ~%pred0
+  ipd 3
+  addd,0,sm 0x0, %dr0, %dr3
+  adds,1 0x0, 0x0, %r0
+
+  30:	
+  ipd 2
+  muls,0 %r0, 0x3, %g16
+  sxt,1 0x2, %r0, %dg17
+  adds,2 %r0, 0x1, %r0
+  disp %ctpr1, 0x30
+
+  50:	
+  nop 4
+  cmplsb,0 %r0, %r1, %pred0
+  shld,1 %dg17, 0x2, %dg17
+
+  60:	
+  adds,0 %g16, 0x1, %g16
+
+  68:	
+  ct %ctpr1 ? %pred0
+  ipd 3
+  stw,2 %dr3, %dg17, %g16
+
+  78:	
+  nop 5
+  ipd 2
+  return %ctpr3
+
+  88:	
+  ct %ctpr3
+  ipd 3
+
+
+0000000000000090 <dot2>:
+  90:	
+  nop 1
+  ipd 2
+  disp %ctpr1, 0x120
+  setwd wsz = 0x4, nfx = 0x1, dbl = 0x0
+
+  a8:	
+  nop 2
+  cmplsb,0 0x0, %r2, %pred0
+
+  b0:	
+  ct %ctpr1 ? ~%pred0
+  ipd 3
+  addd,0,sm 0x0, %dr0, %dr5
+  addd,1,sm 0x0, %dr1, %dr4
+  adds,2 0x0, 0x0, %r0
+  addd,3 0x0, 0x0, %dr1
+
+  c8:	
+  ipd 2
+  sxt,0 0x2, %r0, %dg16
+  adds,1 %r0, 0x1, %r0
+  disp %ctpr1, 0xc8
+
+  e0:	
+  cmplsb,0 %r0, %r2, %pred0
+  shld,2 %dg16, 0x2, %dg16
+
+  f0:	
+  nop 2
+  ldw,0 %dr4, %dg16, %dg17
+  ldw,2 %dr5, %dg16, %dg16
+
+ 100:	
+  nop 5
+  smulx,0 %g16, %g17, %dg16
+
+ 110:	
+  ct %ctpr1 ? %pred0
+  ipd 3
+  addd,0 %dr1, %dg16, %dr1
+
+ 120:	
+  ipd 2
+  return %ctpr3
+
+ 130:	
+  nop 4
+  addd,3 0x0, %dr1, %dr0
+
+ 138:	
+  ct %ctpr3
+  ipd 3
+
+
+0000000000000140 <sum_down>:
+ 140:	
+  nop 1
+  ipd 2
+  adds,0 0x0, 0x0, %r3
+  disp %ctpr1, 0x1b8
+  setwd wsz = 0x4, nfx = 0x1, dbl = 0x0
+
+ 158:	
+  nop 2
+  cmpssb,0 %r1, 0x1, %pred0
+
+ 160:	
+  ct %ctpr1 ? %pred0
+  ipd 3
+  addd,0,sm 0x0, %dr0, %dr4
+  subs,1 %r1, 0x1, %r0
+
+ 170:	
+  ipd 2
+  muls,0 0x1f, %r3, %g16
+  sxt,1 0x2, %r0, %dg17
+  subs,2 %r0, 0x1, %r0
+  disp %ctpr1, 0x170
+
+ 190:	
+  cmplsb,0 %r0, 0x0, %pred0
+  shld,2 %dg17, 0x2, %dg17
+
+ 1a0:	
+  nop 3
+  ldw,2 %dr4, %dg17, %dg17
+
+ 1a8:	
+  ct %ctpr1 ? ~%pred0
+  ipd 3
+  adds,0 %g16, %g17, %r3
+
+ 1b8:	
+  ipd 2
+  return %ctpr3
+
+ 1c8:	
+  nop 4
+  sxt,3 0x2, %r3, %dr0
+
+ 1d0:	
+  ct %ctpr3
+  ipd 3
+
+ 1d8:	
+  nop
+
+
+0000000000000200 <count_pos>:
+ 200:	
+  nop 1
+  ipd 2
+  adds,0 0x0, 0x0, %r3
+  disp %ctpr1, 0x288
+  setwd wsz = 0x4, nfx = 0x1, dbl = 0x0
+
+ 218:	
+  nop 2
+  cmplsb,0 0x0, %r1, %pred0
+
+ 220:	
+  ct %ctpr1 ? ~%pred0
+  ipd 3
+  addd,0,sm 0x0, %dr0, %dr4
+  adds,1 0x0, 0x0, %r0
+
+ 230:	
+  ipd 2
+  sxt,0 0x2, %r0, %dg16
+  disp %ctpr1, 0x268
+
+ 240:	
+  shld,0 %dg16, 0x2, %dg16
+
+ 248:	
+  nop 2
+  ldw,0 %dr4, %dg16, %dg16
+
+ 250:	
+  nop 2
+  cmplesb,0 %g16, 0x0, %pred0
+
+ 258:	
+  ct %ctpr1 ? %pred0
+  ipd 3
+
+ 260:	
+  adds,0 %r3, 0x1, %r3
+
+ 268:	
+  ipd 2
+  adds,0 %r0, 0x1, %r0
+  disp %ctpr1, 0x230
+
+ 278:	
+  nop 3
+  cmplsb,0 %r0, %r1, %pred0
+
+ 280:	
+  ct %ctpr1 ? %pred0
+  ipd 3
+
+ 288:	
+  nop 5
+  ipd 2
+  sxt,3 0x2, %r3, %dr0
+  return %ctpr3
+
+ 298:	
+  ct %ctpr3
+  ipd 3
+
+
+00000000000002a0 <sum_short>:
+ 2a0:	
+  nop 1
+  ipd 2
+  adds,0 0x0, 0x0, %r3
+  disp %ctpr1, 0x320
+  setwd wsz = 0x4, nfx = 0x1, dbl = 0x0
+
+ 2b8:	
+  nop 2
+  cmplsb,0 0x0, %r1, %pred0
+
+ 2c0:	
+  ct %ctpr1 ? ~%pred0
+  ipd 3
+  addd,0,sm 0x0, %dr0, %dr4
+  adds,1 0x0, 0x0, %r0
+
+ 2d0:	
+  ipd 2
+  sxt,0 0x2, %r0, %dg16
+  adds,1 %r0, 0x1, %r0
+  disp %ctpr1, 0x2d0
+
+ 2e8:	
+  cmplsb,0 %r0, %r1, %pred0
+  shld,2 %dg16, 0x1, %dg16
+
+ 2f8:	
+  nop 2
+  ldh,0 %dr4, %dg16, %dg16
+
+ 300:	
+  getfs,0 %g16, _f16s 0x3400, %g16
+
+ 310:	
+  ct %ctpr1 ? %pred0
+  ipd 3
+  adds,0 %r3, %g16, %r3
+
+ 320:	
+  ipd 2
+  return %ctpr3
+
+ 330:	
+  nop 4
+  sxt,3 0x2, %r3, %dr0
+
+ 338:	
+  ct %ctpr3
+  ipd 3
+
+
+0000000000000340 <dec_chars>:
+ 340:	
+  nop 1
+  ipd 2
+  disp %ctpr1, 0x3b8
+  setwd wsz = 0x4, nfx = 0x1, dbl = 0x0
+
+ 358:	
+  nop 2
+  cmplsb,0 0x0, %r1, %pred0
+
+ 360:	
+  ct %ctpr1 ? ~%pred0
+  ipd 3
+  addd,0,sm 0x0, %dr0, %dr3
+  adds,1 0x0, 0x0, %r0
+
+ 370:	
+  ipd 2
+  sxt,0 0x2, %r0, %dg16
+  adds,1 %r0, 0x1, %r0
+  disp %ctpr1, 0x370
+
+ 388:	
+  nop 2
+  cmplsb,0 %r0, %r1, %pred0
+  ldb,2 %dr3, %dg16, %dg17
+
+ 398:	
+  subs,0 %g17, _f16s 0x20, %g17
+
+ 3a8:	
+  ct %ctpr1 ? %pred0
+  ipd 3
+  stb,2 %dr3, %dg16, %g17
+
+ 3b8:	
+  nop 5
+  ipd 2
+  return %ctpr3
+
+ 3c8:	
+  ct %ctpr3
+  ipd 3
+
+
+00000000000003d0 <axpy>:
+ 3d0:	
+  nop 1
+  ipd 2
+  disp %ctpr1, 0x460
+  setwd wsz = 0x4, nfx = 0x1, dbl = 0x0
+
+ 3e8:	
+  nop 2
+  cmplsb,0 0x0, %r3, %pred0
+
+ 3f0:	
+  ct %ctpr1 ? ~%pred0
+  ipd 3
+  addd,0,sm 0x0, %dr0, %dr5
+  adds,2 0x0, 0x0, %r0
+
+ 400:	
+  ipd 2
+  sxt,0 0x2, %r0, %dg16
+  adds,1 %r0, 0x1, %r0
+  disp %ctpr1, 0x400
+
+ 418:	
+  cmplsb,0 %r0, %r3, %pred0
+  shld,2 %dg16, 0x2, %dg16
+
+ 428:	
+  nop 2
+  ldw,0 %dr1, %dg16, %dg17
+  ldw,2 %dr5, %dg16, %dg18
+
+ 438:	
+  nop 5
+  muls,0 %r2, %g17, %g17
+
+ 448:	
+  adds,0 %g18, %g17, %g17
+
+ 450:	
+  ct %ctpr1 ? %pred0
+  ipd 3
+  stw,2 %dr5, %dg16, %g17
+
+ 460:	
+  nop 5
+  ipd 2
+  return %ctpr3
+
+ 470:	
+  ct %ctpr3
+  ipd 3
+
+
+0000000000000478 <sum_even>:
+ 478:	
+  nop 1
+  ipd 2
+  adds,0 0x0, 0x0, %r3
+  disp %ctpr1, 0x4e8
+  setwd wsz = 0x4, nfx = 0x1, dbl = 0x0
+
+ 490:	
+  nop 2
+  cmplsb,0 0x0, %r1, %pred0
+
+ 498:	
+  ct %ctpr1 ? ~%pred0
+  ipd 3
+  addd,0,sm 0x0, %dr0, %dr4
+  adds,1 0x0, 0x0, %r0
+
+ 4a8:	
+  ipd 2
+  sxt,0 0x2, %r0, %dg16
+  adds,1 %r0, 0x2, %r0
+  disp %ctpr1, 0x4a8
+
+ 4c0:	
+  cmplsb,0 %r0, %r1, %pred0
+  shld,2 %dg16, 0x2, %dg16
+
+ 4d0:	
+  nop 2
+  ldw,0 %dr4, %dg16, %dg16
+
+ 4d8:	
+  ct %ctpr1 ? %pred0
+  ipd 3
+  adds,0 %r3, %g16, %r3
+
+ 4e8:	
+  ipd 2
+  return %ctpr3
+
+ 4f8:	
+  nop 4
+  sxt,3 0x2, %r3, %dr0
+
+ 500:	
+  ct %ctpr3
+  ipd 3
+
+
+0000000000000508 <sum_from>:
+ 508:	
+  nop 1
+  ipd 2
+  adds,0 0x0, 0x0, %r4
+  disp %ctpr1, 0x570
+  setwd wsz = 0x4, nfx = 0x1, dbl = 0x0
+
+ 520:	
+  nop 2
+  cmplsb,0 %r1, %r2, %pred0
+
+ 528:	
+  ct %ctpr1 ? ~%pred0
+  ipd 3
+
+ 530:	
+  ipd 2
+  sxt,0 0x2, %r1, %dg16
+  adds,1 %r1, 0x1, %r1
+  disp %ctpr1, 0x530
+
+ 548:	
+  cmplsb,0 %r1, %r2, %pred0
+  shld,2 %dg16, 0x2, %dg16
+
+ 558:	
+  nop 2
+  ldw,0 %dr0, %dg16, %dg16
+
+ 560:	
+  ct %ctpr1 ? %pred0
+  ipd 3
+  adds,0 %r4, %g16, %r4
+
+ 570:	
+  ipd 2
+  return %ctpr3
+
+ 580:	
+  nop 4
+  sxt,3 0x2, %r4, %dr0
+
+ 588:	
+  ct %ctpr3
+  ipd 3
+
+
+0000000000000590 <sum_xor>:
+ 590:	
+  nop 1
+  ipd 2
+  adds,0 0x0, 0x0, %r4
+  disp %ctpr1, 0x650
+  setwd wsz = 0x4, nfx = 0x1, dbl = 0x0
+
+ 5a8:	
+  nop 2
+  cmplsb,0 0x0, %r1, %pred0
+
+ 5b0:	
+  ct %ctpr1 ? ~%pred0
+  ipd 3
+  addd,0,sm 0x0, %dr0, %dr5
+  addd,1,sm 0x0, %dr2, %dr6
+  adds,2 0x0, 0x0, %r0
+  adds,3 0x0, 0x0, %r2
+
+ 5c8:	
+  nop
+
+ 600:	
+  ipd 2
+  sxt,0 0x2, %r0, %dg16
+  adds,1 %r0, 0x1, %r0
+  disp %ctpr1, 0x600
+
+ 618:	
+  cmplsb,0 %r0, %r1, %pred0
+  shld,2 %dg16, 0x2, %dg16
+
+ 628:	
+  nop 2
+  ldw,0 %dr5, %dg16, %dg16
+
+ 630:	
+  shls,0 %g16, 0x1, %g17
+  adds,1 %r4, %g16, %r4
+
+ 640:	
+  ct %ctpr1 ? %pred0
+  ipd 3
+  xors,0 %r2, %g17, %r2
+
+ 650:	
+  nop 5
+  ipd 2
+  stw,2 %dr6, 0x0, %r2
+  sxt,3 0x2, %r4, %dr0
+  return %ctpr3
+
+ 668:	
+  ct %ctpr3
+  ipd 3
+
+
+0000000000000670 <sum2d>:
+ 670:	
+  nop 1
+  ipd 2
+  adds,0 0x0, 0x0, %r4
+  disp %ctpr1, 0x740
+  setwd wsz = 0x4, nfx = 0x1, dbl = 0x0
+
+ 688:	
+  nop 2
+  cmplsb,0 0x0, %r1, %pred0
+
+ 690:	
+  ct %ctpr1 ? ~%pred0
+  ipd 3
+  addd,0,sm 0x0, %dr0, %dr6
+  adds,1,sm 0x0, %r2, %r5
+  addd,2 0x0, 0x0, %dr2
+
+ 6a8:	
+  nop 4
+  ipd 2
+  cmplsb,0 0x0, %r5, %pred0
+  adds,1 0x0, 0x0, %r0
+  disp %ctpr1, 0x720
+
+ 6c0:	
+  ct %ctpr1 ? ~%pred0
+  ipd 3
+
+ 6c8:	
+  ipd 2
+  smulx,0 %r4, %r5, %dg16
+  sxt,1 0x2, %r0, %dg17
+  adds,2 %r0, 0x1, %r0
+  disp %ctpr1, 0x6c8
+
+ 6e8:	
+  nop 4
+  cmplsb,0 %r0, %r5, %pred0
+
+ 6f0:	
+  addd,0 %dg16, %dg17, %dg16
+
+ 6f8:	
+  shld,0 %dg16, 0x2, %dg16
+
+ 700:	
+  nop 2
+  ldw,0 %dr6, %dg16, %dg16
+
+ 708:	
+  sxt,0 0x2, %g16, %dg16
+
+ 710:	
+  ct %ctpr1 ? %pred0
+  ipd 3
+  addd,0 %dr2, %dg16, %dr2
+
+ 720:	
+  ipd 2
+  adds,0 %r4, 0x1, %r4
+  disp %ctpr1, 0x6a8
+
+ 730:	
+  nop 3
+  cmplsb,0 %r4, %r1, %pred0
+
+ 738:	
+  ct %ctpr1 ? %pred0
+  ipd 3
+
+ 740:	
+  ipd 2
+  return %ctpr3
+
+ 750:	
+  nop 4
+  addd,3 0x0, %dr2, %dr0
+
+ 758:	
+  ct %ctpr3
+  ipd 3
+
+
+0000000000000760 <widen>:
+ 760:	
+  nop 1
+  ipd 2
+  disp %ctpr1, 0x7d8
+  setwd wsz = 0x4, nfx = 0x1, dbl = 0x0
+
+ 778:	
+  nop 2
+  cmplsb,0 0x0, %r2, %pred0
+
+ 780:	
+  ct %ctpr1 ? ~%pred0
+  ipd 3
+  addd,0,sm 0x0, %dr0, %dr4
+  adds,2 0x0, 0x0, %r0
+
+ 790:	
+  ipd 2
+  sxt,0 0x2, %r0, %dg16
+  adds,1 %r0, 0x1, %r0
+  disp %ctpr1, 0x790
+
+ 7a8:	
+  cmplsb,0 %r0, %r2, %pred0
+  shld,1 %dg16, 0x3, %dg16
+  shld,2 %dg16, 0x2, %dg17
+
+ 7b8:	
+  nop 2
+  ldw,0 %dr1, %dg17, %dg17
+
+ 7c0:	
+  sxt,0 0x2, %g17, %dg17
+
+ 7c8:	
+  ct %ctpr1 ? %pred0
+  ipd 3
+  std,2 %dr4, %dg16, %dg17
+
+ 7d8:	
+  nop 5
+  ipd 2
+  return %ctpr3
+
+ 7e8:	
+  ct %ctpr3
+  ipd 3
+
+
+00000000000007f0 <dsum>:
+ 7f0:	
+  nop 1
+  ipd 2
+  addd,0 0x0, 0x0, %dr3
+  disp %ctpr1, 0x860
+  setwd wsz = 0x4, nfx = 0x1, dbl = 0x0
+
+ 808:	
+  nop 2
+  cmplsb,0 0x0, %r1, %pred0
+
+ 810:	
+  ct %ctpr1 ? ~%pred0
+  ipd 3
+  addd,0,sm 0x0, %dr0, %dr4
+  adds,1 0x0, 0x0, %r0
+
+ 820:	
+  ipd 2
+  sxt,0 0x2, %r0, %dg16
+  adds,1 %r0, 0x1, %r0
+  disp %ctpr1, 0x820
+
+ 838:	
+  cmplsb,0 %r0, %r1, %pred0
+  shld,2 %dg16, 0x3, %dg16
+
+ 848:	
+  nop 2
+  ldd,0 %dr4, %dg16, %dg16
+
+ 850:	
+  ct %ctpr1 ? %pred0
+  ipd 3
+  faddd,0 %dr3, %dg16, %dr3
+
+ 860:	
+  nop 4
+  ipd 2
+  return %ctpr3
+
+ 870:	
+  addd,3 0x0, %dr3, %dr0
+
+ 878:	
+  ct %ctpr3
+  ipd 3
+
